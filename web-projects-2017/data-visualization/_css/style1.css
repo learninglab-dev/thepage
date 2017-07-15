@@ -1,0 +1,21 @@
+
+div {
+  width: 500px;
+  height: 100px;
+  margin: auto;
+  background-color: rgba(100, 0, 0, 0.2);
+  margin-top: 20px;
+}
+
+#div4 {
+  width: 500px;
+  height: 100px;
+  margin: auto;
+  background-color: rgba(100, 0, 255, 0.5);
+  margin-top: 20px;
+}
+
+p {
+  font-family: Avenir;
+
+}

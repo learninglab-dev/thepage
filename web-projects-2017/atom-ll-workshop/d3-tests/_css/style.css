@@ -1,0 +1,27 @@
+body {
+  font-family: "Avenir Next";
+}
+
+b {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: 100;
+}
+
+.item {
+  padding: 20px;
+}
+
+.highlight {
+  padding: 20px;
+  color: rgba(255,255,0,1.0);
+
+}

@@ -1,0 +1,513 @@
+
+<script type="text/javascript" src="js/tabletop.js"></script>
+<script type="text/javascript" src="js/d3.js" charset="utf-8"></script>
+<style type="text/css">
+		.unselectable {
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+			pointer-events: none;
+		}
+</style>
+<div id="graph" style="border: 1px solid black; float: left;"></div>
+<script type="text/javascript">
+	window.onload = function() { init() };
+	function init() {
+		Tabletop.init( { key: '1xzKQuxBFom3hGKDJ4C2odr3L3s3QrxPpARVGvYtBXYE',
+                     callback: updateGraph,
+                     simpleSheet: true } )
+	}
+	//Width and height
+	var w=1000, h=800;
+	var subGraphs = [2,1];
+		var wG = w / subGraphs[1];
+		var hG = h / subGraphs[0];
+	var subGraphGs = [];
+	var myData = [];
+	var colorMap = [];
+	var graphTypes = ['pie','pie'];
+	//Create SVG element
+	var svg = d3.select("#graph")
+		.append("svg")
+		.attr("width", w)
+		.attr("height", h);
+
+	var toolTip = svg.append("g");//.style("visibility","hidden");
+
+	function assignColorScales() {
+		var colorList = ['#607d8b','#795548','#ff9800','#ffeb3b','#8bc34a','#009688','#dd0000','#00dd00','#0000dd','#dddd00','#dd00dd','#00dddd','#770000','#007700','#000077','#777700','#770077','#007777','#330000','#003300','#000033','#333300','#330033','#003333'];
+		var colors = ["Red","Green","Orange","Yellow","Blue","Indigo","Violet"];
+		var ct = 0;
+		for (var i=0; i<myData.length; i++) {
+			var v = Object.values(myData[i]);
+			for (var j=1; j<v.length; j++) {
+				vv = v[j]; //ignore the first column in the data, it's a timestamp
+				if (colors.indexOf(vv)==-1 && !(vv in colorMap)) {
+					colorMap[vv] = colorList[ct];
+					console.log(vv + "-->" + colorList[ct]);
+					ct++;
+					if (ct==colorList.length) {ct=0;}
+				}
+				else if (!(vv in colorMap)) {
+					colorMap[vv] = vv;
+					console.log(vv + "-->" + colorMap[vv]);
+				}
+			}
+		}
+		//console.log('colormap:', colorMap);
+	}
+	function updateGraph(data, tabletop) {
+		myData = data;
+		assignColorScales();
+		var keys = (Object.keys(data[0]));
+		//var wG = (w) / (keys.length-1);
+		var graphData = {};
+		for (var i=0; i<subGraphs[0]; i++) {
+			subGraphGs.push([]);
+			var curRow = subGraphGs[i];
+			for(var j=0; j<subGraphs[1]; j++) {
+				var curG = svg.append("g");
+				curRow.push(curG);
+				svg.append("rect")
+					.attr("width",wG)
+					.attr("height", hG)
+					.attr("x",wG*j)
+					.attr("y",hG*i)
+					.attr("fill","none")
+					.attr("stroke","black")
+					.attr("stroke-width",1);
+				svg.append("rect")
+					.attr("width",20)
+					.attr("height", 20)
+					.attr("x",wG*j+5)
+					.attr("y",hG*i+5)
+					.attr("data",i+","+j)
+					.attr("fill","black")
+					.attr("stroke","black")
+					.attr("stroke-width",1)
+					.on("click", function(){convertTo(d3.select(this).attr("data"),"bar");});
+				svg.append("circle")
+					.attr("r", 10)
+					.attr("cx",wG*j+40)
+					.attr("cy",hG*i+15)
+					.attr("data",i+","+j)
+					.attr("fill","black")
+					.attr("stroke","black")
+					.attr("stroke-width",1)
+					.on("click", function(){convertTo(d3.select(this).attr("data"),"pie");});
+			}
+		}
+		//console.log(subGraphGs);
+
+		var r=0,c=0;
+		for (jj=0; jj<keys.length-1; jj++) {
+			if (c>=subGraphs[1]) {c=0; r++;}
+			if (graphTypes[jj] == 'bar') {console.log(r,c," bar"); plotBarGraph(r,c);}
+			else {console.log(r,c," pie"); plotPieGraph(r,c);}
+
+			c++;
+		}
+	}
+
+	function getGraphData(r,c) {
+		graphData = {};
+		for (var i=0; i<myData.length; i++) {
+			var v = Object.values(myData[i]);
+			v = v[r*subGraphs[1]+c+1]; //ignore the first column in the data, it's a timestamp
+			if (!(v in graphData)) {graphData[v] = 1; console.log(v)}
+			else {graphData[v]= Number(graphData[v]) + 1;}
+		}
+		return graphData;
+	}
+
+	function getGraphDataCondition(dataIndex,condIndex,vv) {
+		graphData = {};
+		console.log(dataIndex,condIndex,vv);
+		for (var i=0; i<myData.length; i++) {
+			var v = Object.values(myData[i]);
+			vCond = v[condIndex]; //ignore the first column in the data, it's a timestamp
+			v = v[dataIndex]; //ignore the first column in the data, it's a timestamp
+			if (vCond == vv) { //only for the subset we care about
+				if (!(v in graphData)) {graphData[v] = 1; console.log(v)}
+				else {graphData[v]= Number(graphData[v]) + 1;}
+			}
+		}
+		console.log(graphData);
+		return graphData;
+	}
+
+	function setToolTip(ref,txt) {
+		var t = 'error no tooltip found';
+		try {t = toolTip.select("text").text();}
+		catch(err) {//console.log(err);
+		}
+		//console.log(t);
+		var c = [0,0];
+		c = d3.mouse(ref);
+		//console.log("coords:",c);
+		c[0]+=5;
+		c[1]-=15;
+		if (t == txt && 0) { //just move it (doesn't work very well)
+			toolTip.transition().duration(50)
+				.attr("transform","translate("+c[0]+","+c[1]+")");
+		}
+		else { //create a new one
+			toolTip.remove();
+			if (txt.length > 0) {
+				toolTip = svg.append("g");
+				var curRect = toolTip.append("rect")
+					.attr("x",0)
+					.attr("y",0)
+					.attr("height",18)
+					.attr("fill","rgba(255,255,255,0.5)")
+					.style("pointer-events","none");
+				var curText = toolTip.append("text")
+					.text(txt)
+					.attr("x",3)
+					.attr("y",9)
+					.attr("alignment-baseline","middle")
+					.attr("text-anchor","left")
+					.attr("fill","black")
+					.attr("font-size","12")
+					.attr("font-weight","bold")
+					.attr("class","unselectable");
+				var bb = curText.node().getBBox();
+				//console.log(bb);
+				curRect.attr("width",5+bb['width']);
+				toolTip.attr("transform","translate("+c[0]+","+c[1]+")");
+			}
+		}
+	}
+
+	function convertTo(subG, type) {
+		var dur = 500;
+		var i = Number(subG.split(",")[0]);
+		var j = Number(subG.split(",")[1]);
+		console.log("clear:",i,j);
+		clearG(i,j, dur);
+		setTimeout(function(){convertTo2(i,j,type);},dur);
+	}
+	function convertTo2(i,j,type) {
+		if (type == "bar") {plotBarGraph(i,j);}
+		if (type == "pie") {plotPieGraph(i,j);}
+	}
+
+	function clearG(i,j, dur) {
+		subGraphGs[i][j].selectAll("rect").transition().duration(dur).attr("fill","white");
+		subGraphGs[i][j].selectAll("path").transition().duration(dur).attr("fill","white").attr("stroke","white");
+		subGraphGs[i][j].selectAll("text").transition().duration(dur).attr("fill","white");
+		d3.select("#slice"+ i + j).selectAll("path")
+			.transition().duration(dur).attr("fill","white").attr("stroke","white");
+		setTimeout(function(){clear2(i,j);},dur);
+	}
+	function clear2(i,j) {
+		subGraphGs[i][j].selectAll("rect").remove();
+		subGraphGs[i][j].selectAll("path").remove();
+		subGraphGs[i][j].selectAll("text").remove();
+		subGraphGs[i][j].selectAll("g").remove();
+		d3.select("#slice"+ i + j).remove();
+
+	}
+
+	function plotSubGraph(r,c,rCond,cCond,cond) {
+		graphData = getGraphDataCondition(r,c,rCond,cCond,cond);
+		drawPie(r,c,graphData);
+	}
+
+	function plotPieGraph(r,c) {
+		graphData = getGraphData(r,c);
+		drawPie(r,c,graphData);
+	}
+
+	function drawPie(rr,cc,graphData) {
+		drawPieWithSlice(rr,cc,graphData,-1,'');
+	}
+
+	function drawPieWithSlice(rr,cc,graphData,conditionIndex,conditionValue) {
+		d3.select("#slice"+ rr + cc).remove();
+		toolTip.remove();
+		if (conditionIndex >=0) {
+			console.log("cI,cV",conditionIndex,conditionValue);
+			var graphDataSub = getGraphDataCondition(conditionIndex,(rr*subGraphs[1]+cc)+1,conditionValue);
+			console.log(graphDataSub);
+		}
+		//set cI = 0 if current graph is 1, otherwise 1 if current graph is 0
+		var conditionIndex = (rr*subGraphs[1]+cc)+2;
+		if (conditionIndex>2) {conditionIndex=1;}
+
+		var xG = cc*wG;
+		var yG = (rr+1)*hG;
+		var x = 20 + xG;
+		var totalData = 0;
+		var lengthData = 0;
+		for (var v in graphData) {
+			//if (graphData[v] > maxData) {maxData = graphData[v];}
+			totalData += graphData[v];
+			lengthData++;
+		}
+		console.log("total",totalData);
+		var myContainer = subGraphGs[rr][cc];
+
+		myContainer.selectAll("rect").remove();
+		myContainer.selectAll("path").remove();
+		myContainer.selectAll("g").remove();
+		myContainer.selectAll("text").remove();
+
+		var cx = (x + (wG-100)/2), cy = yG - hG/2;
+		var RBIG = 1.05; //ratio of large radius to small for mouseover
+		var r = (Math.min(hG,wG-100) / 2 - 10)/RBIG;
+		var curTh = 0;
+		var sx=0,sy=0;
+		var	ex = cx+Math.round(10*r*Math.sin(curTh))/10;
+		var	ey = cy+Math.round(10*r*Math.cos(curTh))/10;
+		var colors = ["Red","Green","Orange","Yellow","Blue","Indigo","Violet"];;
+		//console.log(colors);
+		var curY = cy - r;
+		var iii=0;
+	for (var v in graphData) {
+			sx = ex;
+			sy = ey;
+			var th = (graphData[v]/totalData) * Math.PI * 2;
+			curTh += th;
+			ex = cx+Math.round(10*r*Math.sin(curTh))/10;
+			ey = cy+Math.round(10*r*Math.cos(curTh))/10;
+			var cmd = 'M' + cx + "," + cy //Move pointer
+			  + 'L' + sx + "," + sy
+			  + 'A' + r + "," + r + ' 0 0,0 ' + ex + "," + ey
+			  + 'Z';
+			var sx2 = (sx-cx)*RBIG+cx, sy2 = (sy-cy)*RBIG+cy,
+				ex2 = (ex-cx)*RBIG+cx, ey2 = (ey-cy)*RBIG+cy;
+			var cmdBig = 'M' + cx + "," + cy //Move pointer
+			  + 'L' + sx2 + "," + sy2
+			  + 'A' + r*RBIG + "," + r*RBIG + ' 0 0,0 ' + ex2 + "," + ey2
+			  + 'Z';
+			var curG = myContainer.append("g").attr("data",v);
+			myContainer.append("rect")
+				.attr("width",20)
+				.attr("height", 20)
+				.attr("x",cx+r+10)
+				.attr("y",curY)
+				.attr("fill","white").transition().duration(1000)
+				.attr("fill", colorMap[v]);//(colors.indexOf(v)>-1) ? v:colors[iii]);
+				curY += 25;
+			myContainer.append("text")
+				.text(v)
+				.attr("x",cx + r + 35)
+				.attr("y",curY-12.5)
+				.attr("alignment-baseline","middle")
+				.attr("text-anchor","left")
+				.attr("fill","white").transition().duration(1000)
+				.attr("fill","black")
+				.attr("font-size","12")
+				.attr("class","unselectable");
+			curG.append("path")
+				.attr("d",cmd)
+				.attr("data",cmdBig)
+				.attr("val",graphData[v])
+				.attr("fill","white")
+				.attr("stroke","white").transition().duration(100)
+				.attr("fill", colorMap[v]) //(colors.indexOf(v)>-1) ? v:colors[iii])
+				.attr("stroke","black")
+				.attr("stroke-width",2);
+			curG.on("mouseover", function() {
+					var d = d3.select(this).selectAll("path");
+					var temp = d.attr("data");
+					d.attr("data",d.attr("d")).attr("d",temp).attr("stroke-width",4);
+					})
+				.on("mousemove", function() {
+					setToolTip(this,d3.select(this).selectAll("path").attr("val"));
+				})
+				.on("mouseout", function() {
+					var d = d3.select(this).selectAll("path");
+					var temp = d.attr("data");
+					d.attr("data",d.attr("d")).attr("d",temp).attr("stroke-width",2);
+					toolTip.remove();
+					})
+				.on("click", function() {
+					drawPieWithSlice(rr,cc,graphData,conditionIndex,d3.select(this).attr("data"));
+				});
+			iii++;
+			if (iii == colors.length){iii=0;}
+			if ((v==conditionValue)) {
+
+				var subG = svg.append("g");
+				subG.attr("id","slice" + rr + cc);
+				var totalDataSub = 0;
+				for (var vv in graphDataSub) {
+					totalDataSub += graphDataSub[vv];
+				}
+				var rMin=0, rMax=0;
+				for (var vv in graphDataSub) {
+					var prevTh = curTh - th;
+					rMin = rMax;
+					rMax += RBIG*r*graphDataSub[vv]/totalDataSub;
+					console.log(vv,rMin,rMax);
+					var xx=[0,0,0,0], yy=[0,0,0,0];
+					xx[0] = cx+Math.round(10*rMin*Math.sin(prevTh+th/10))/10;
+					yy[0] += cy+Math.round(10*rMin*Math.cos(prevTh+th/10))/10;
+					xx[1] = cx+Math.round(10*rMax*Math.sin(prevTh+th/10))/10;
+					yy[1] += cy+Math.round(10*rMax*Math.cos(prevTh+th/10))/10;
+					xx[3] = cx+Math.round(10*rMin*Math.sin(curTh-th/10))/10;
+					yy[3] += cy+Math.round(10*rMin*Math.cos(curTh-th/10))/10;
+					xx[2] = cx+Math.round(10*rMax*Math.sin(curTh-th/10))/10;
+					yy[2] += cy+Math.round(10*rMax*Math.cos(curTh-th/10))/10;
+					//console.log(xx,yy);
+					var cmd = 'M' + xx[1] + "," + yy[1] //Move pointer
+					  + 'A' + r + "," + r + ' 0 0,0 ' + xx[2] + "," + yy[2]
+					  + 'L' + xx[3] + "," + yy[3]
+					  + 'A' + r + "," + r + ' 0 0,1 ' + xx[0] + "," + yy[0]
+					  + 'Z';
+
+					subG.append("path")
+						.attr("d",cmd)
+						.attr("val",vv + ":" + graphDataSub[vv])
+						.attr("fill","white")
+						.attr("stroke","white").transition().duration(100)
+						.attr("fill", colorMap[vv])//(colors.indexOf(vv)>-1) ? vv:colors[iii])
+						.attr("stroke",colorMap[v])
+						.attr("stroke-width",1);
+					subG.on("mousemove", function() {
+							var tt="";
+							d3.select(this).selectAll("path").each(function (d) {
+								if (tt.length>0) {tt+=", ";}
+								tt += d3.select(this).attr("val");
+							});
+							setToolTip(this,tt);
+						})
+						.on("click", function () {
+							drawPieWithSlice(rr,cc,graphData,-1,'');
+						});
+					iii++;
+					if (iii == colors.length){iii=0;}
+				}
+			}
+		}
+	}
+
+	function arcSlice(rMin, rMax, th1, th2) {
+		var cmd = 'M' + xx[1] + "," + yy[1] //Move pointer
+		  + 'A' + r + "," + r + ' 0 0,0 ' + xx[2] + "," + yy[2]
+		  + 'L' + xx[3] + "," + yy[3]
+		  + 'A' + r + "," + r + ' 0 0,0 ' + xx[0] + "," + yy[0]
+		  + 'Z';
+	}
+
+	function plotBarGraph(r,c) {
+		plotBarGraph(r,c,-1,'');
+	}
+	function plotBarGraph(r,c,conditionIndex,conditionValue) {
+		d3.select("#slice"+ r + c).remove();
+		toolTip.remove();
+		var myContainer = subGraphGs[r][c];
+
+		myContainer.selectAll("rect").remove();
+		myContainer.selectAll("path").remove();
+		myContainer.selectAll("g").remove();
+		myContainer.selectAll("text").remove();
+
+		if (conditionIndex >=0) {
+			console.log("cI,cV",conditionIndex,conditionValue);
+			var graphDataSub = getGraphDataCondition(conditionIndex,(r*subGraphs[1]+c)+1,conditionValue);
+			console.log(graphDataSub);
+		}
+		//set cI = 0 if current graph is 1, otherwise 1 if current graph is 0
+		var conditionIndex = (r*subGraphs[1]+c)+2;
+		if (conditionIndex>2) {conditionIndex=1;}
+		var xG = c*wG;
+		var yG = (r+1)*hG;
+		var x = 20 + xG;
+		graphData = getGraphData(r,c);
+		var maxData = 0;
+		var lengthData = 0;
+		var myContainer = subGraphGs[r][c];
+		var colors = ["Red","Green","Orange","Yellow","Blue","Indigo","Violet"];
+		for (var v in graphData) {
+			if (graphData[v] > maxData) {maxData = graphData[v];}
+			lengthData++;
+		}
+		for (var v in graphData) {
+			var curH = (hG-60)*graphData[v]/maxData;
+			var curY = yG-curH-20;
+			var curW = (wG-100) / lengthData - 10;
+			var curRect = myContainer.append("rect")
+				.attr("width",curW)
+				.attr("height", 0)
+				.attr("height", curH)
+				.attr("x",x)
+				.attr("y",curY)
+				.attr("data",v)
+				.attr("val",graphData[v])
+				.on("mouseout", function() {
+					var d = d3.select(this).transition().duration(1000).style("fill","grey");
+					toolTip.remove();
+					})
+				.on("mousemove", function() {
+					setToolTip(this,d3.select(this).attr("val"));
+				})
+				.on("click", function() {
+					plotBarGraph(r,c,conditionIndex,d3.select(this).attr("data"));
+				});
+			if (colors.indexOf(v)>-1) {
+				curRect.attr("data",v)
+				.on("mouseover", function() {
+					var t = d3.select(this);
+					t.transition()
+						.style("fill",t.attr("data"));
+					});}
+			else {
+				curRect.on("mouseover", function() {
+					var t = d3.select(this);
+					t.transition().duration(10)
+						.style("fill",colorMap[t.attr("data")]);
+					});}
+			curRect.attr("fill","white")//.transition().duration(10)
+				.attr("fill","grey");
+			if (v==conditionValue) {
+				var subG = svg.append("g");
+				subG.attr("id","slice" + r + c);
+				var totalDataSub = 0;
+				for (var vv in graphDataSub) {
+					totalDataSub += graphDataSub[vv];
+				}
+				var yy = curY;
+				for (var vv in graphDataSub) {
+					console.log(vv,curH*graphDataSub[vv]/totalDataSub);
+					subG.append("rect")
+						.attr("width",0.8*curW)
+						.attr("height", curH*graphDataSub[vv]/totalDataSub)
+						.attr("x",x + 0.1*curW)
+						.attr("y",yy)
+						.attr("data",v)
+						.attr("val",vv + ":" + graphDataSub[vv])
+						.attr("fill", colorMap[vv]);
+					yy += curH*graphDataSub[vv]/totalDataSub;
+				}
+				subG.on("mousemove", function() {
+					var tt="";
+					d3.select(this).selectAll("rect").each(function (d) {
+						if (tt.length>0) {tt+=", ";}
+						tt += d3.select(this).attr("val");
+					});
+					setToolTip(this,tt);
+				})
+				.on("click", function () {
+					plotBarGraph(r,c,-1,'');
+				});
+			}
+			myContainer.append("text")
+				.text(v)
+				.attr("x",x+curW/2)
+				.attr("y",yG-10)
+				.attr("alignment-baseline","middle")
+				.attr("text-anchor","middle")
+				.attr("fill","white")//.transition().duration(1000)
+				.attr("fill","black")
+				.attr("font-size","12")
+				.attr("class","unselectable");
+			x+=curW+10;
+		}
+	}
+</script>

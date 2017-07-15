@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset='utf-8'>
+    <link rel='stylesheet' href='_css/style.css' type='text/css'>
+</head>
+<body>
+
+<script src="_js/d3.min.js"></script>
+</body>
+</html>

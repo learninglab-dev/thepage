@@ -1,0 +1,142 @@
+body {
+    font-family: "Avenir Next", sans-serif;
+    font-weight: 300;
+    font-size: 3em;
+    color: white
+}
+
+.navigationBar {
+    height: 50px;
+    width: 80%;
+    margin: auto;
+    background-color: #888888;
+    float: right;
+    
+}
+
+.slides {
+    width: 50%;
+    padding: 5px;
+    background-color: #aaaaaa;
+    
+}
+
+.left {
+    width: 20%;
+    padding: 20px;
+    position: relative
+}
+
+.right {
+    width: 20%;
+     position: relative
+}
+
+.box {                
+    
+}
+
+#animation {
+    float: left;
+}
+
+#boxOne {
+    height: 100px;
+    width: 100px;
+    background-color: rgba(255,0,47,.8);
+    transition: all 1s;
+    position: absolute;
+    margin-top: 100px;
+    margin-right: 50px;
+    
+    
+}
+
+#boxOne:hover {
+   
+    
+    height: 200px;
+/*    transition: height 1s ease; */
+     background-color:  rgba(0,0,255,.5);
+    transition: all 1s
+}
+
+#boxTwo {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    margin-left: 400px;
+    background-color: rgba(255,220,0,.6);  
+    transition-property: background;
+    transition-duration: 1s;
+}
+
+#boxTwo:hover {
+    background-color: red;
+}
+
+#boxThree {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    background-color: rgba(0,47,255,.5);
+    margin-left: 200px;
+    margin-top: 300px;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+#boxThree:hover {
+    width: 300px;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+
+#boxFour {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    background-color: rgba(0,47,255,.5);
+    margin-left: 200px;
+    margin-top: 405px;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+#boxFour:hover {
+    width: 300px;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+
+#boxFive {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    background-color: rgba(0,47,255,.5);
+    margin-left: 200px;
+    margin-top: 510px;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+#boxFive:hover {
+    width: 300px;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+

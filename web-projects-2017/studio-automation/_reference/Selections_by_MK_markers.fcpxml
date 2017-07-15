@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fcpxml>
+
+<fcpxml version="1.5">
+    <resources>
+        <format id="r1" frameDuration="1001/24000s" width="640" height="360"/>
+        <asset id="r2" name="20161216_002_LL_SOC113_Manja_C300a_001" uid="C97202390B2362558D6CF4ECB4E241AC" src="file:///Users/mlv_100_mk/Movies/Untitled%201.fcpbundle/Selections_by_MK/Original%20Media/20161216_002_LL_SOC113_Manja_C300a_001.mov" start="1081593513/24000s" duration="102306204/24000s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <bookmark>Ym9va3ADAAAAAAQQMAAAAPkNWk2psLDW9D5e+cRxpw5VVP2kI7hx0YdxmCUnzjsdbAIAAAQAAAADAwAAAAgAKAUAAAABAQAAVXNlcnMAAAAKAAAAAQEAAG1sdl8xMDBfbWsAAAYAAAABAQAATW92aWVzAAAUAAAAAQEAAFVudGl0bGVkIDEuZmNwYnVuZGxlEAAAAAEBAABTZWxlY3Rpb25zX2J5X01LDgAAAAEBAABPcmlnaW5hbCBNZWRpYQAAKgAAAAEBAAAyMDE2MTIxNl8wMDJfTExfU09DMTEzX01hbmphX0MzMDBhXzAwMS5tb3YAABwAAAABBgAAEAAAACAAAAA0AAAARAAAAGAAAAB4AAAAkAAAAAgAAAAEAwAAESoGAAAAAAAIAAAABAMAAKmJBgAAAAAACAAAAAQDAADniQYAAAAAAAgAAAAEAwAA1lf9AQAAAAAIAAAABAMAAFRZ/QEAAAAACAAAAAQDAABYWf0BAAAAAAgAAAAEAwAAYFn9AQAAAAAcAAAAAQYAAOgAAAD4AAAACAEAABgBAAAoAQAAOAEAAEgBAAAIAAAAAAQAAEG+Be5wAAAAGAAAAAECAAABAAAAAAAAAA8AAAAAAAAAAAAAAAAAAAAIAAAABAMAAAUAAAAAAAAABAAAAAMDAAD1AQAACAAAAAEJAABmaWxlOi8vLwoAAAABAQAATUxWXzEwMF9NSwAACAAAAAQDAAAAAIIxdAAAAAgAAAAABAAAQbwADiMAAAAkAAAAAQEAADk0OTJDRUU1LTcwRTgtM0FCRS1CRjU3LTc4MzFBRkFENDM1OBgAAAABAgAAgQAAAAEAAADvEwAAAQAAAAAAAAAAAAAAAQAAAAEBAAAvAAAAAAAAAAEFAADMAAAA/v///wEAAAAAAAAAEAAAAAQQAADEAAAAAAAAAAUQAABYAQAAAAAAABAQAACMAQAAAAAAAEAQAAB8AQAAAAAAAAIgAABYAgAAAAAAAAUgAADIAQAAAAAAABAgAADYAQAAAAAAABEgAAAMAgAAAAAAABIgAADsAQAAAAAAABMgAAD8AQAAAAAAACAgAAA4AgAAAAAAADAgAABkAgAAAAAAAAHAAACsAQAAAAAAABHAAAAgAAAAAAAAABLAAAC8AQAAAAAAABDQAAAEAAAAAAAAAA==</bookmark>
+        </asset>
+        <asset id="r3" name="20161216_002_LL_SOC113_Manja_C300b_001" uid="B0307A6BEABAF681BFA452268A1AF266" src="file:///Users/mlv_100_mk/Movies/Untitled%201.fcpbundle/Selections_by_MK/Original%20Media/20161216_002_LL_SOC113_Manja_C300b_001.mov" start="1082945864/24000s" duration="100924824/24000s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <bookmark>Ym9va3ADAAAAAAQQMAAAAAAwgRFaC/fH9C8HxxeqW7/fzznFAp5pqc1lHvJ3QBSKbAIAAAQAAAADAwAAAAgAKAUAAAABAQAAVXNlcnMAAAAKAAAAAQEAAG1sdl8xMDBfbWsAAAYAAAABAQAATW92aWVzAAAUAAAAAQEAAFVudGl0bGVkIDEuZmNwYnVuZGxlEAAAAAEBAABTZWxlY3Rpb25zX2J5X01LDgAAAAEBAABPcmlnaW5hbCBNZWRpYQAAKgAAAAEBAAAyMDE2MTIxNl8wMDJfTExfU09DMTEzX01hbmphX0MzMDBiXzAwMS5tb3YAABwAAAABBgAAEAAAACAAAAA0AAAARAAAAGAAAAB4AAAAkAAAAAgAAAAEAwAAESoGAAAAAAAIAAAABAMAAKmJBgAAAAAACAAAAAQDAADniQYAAAAAAAgAAAAEAwAA1lf9AQAAAAAIAAAABAMAAFRZ/QEAAAAACAAAAAQDAABYWf0BAAAAAAgAAAAEAwAAf1n9AQAAAAAcAAAAAQYAAOgAAAD4AAAACAEAABgBAAAoAQAAOAEAAEgBAAAIAAAAAAQAAEG+BfCsAAAAGAAAAAECAAABAAAAAAAAAA8AAAAAAAAAAAAAAAAAAAAIAAAABAMAAAUAAAAAAAAABAAAAAMDAAD1AQAACAAAAAEJAABmaWxlOi8vLwoAAAABAQAATUxWXzEwMF9NSwAACAAAAAQDAAAAAIIxdAAAAAgAAAAABAAAQbwADiMAAAAkAAAAAQEAADk0OTJDRUU1LTcwRTgtM0FCRS1CRjU3LTc4MzFBRkFENDM1OBgAAAABAgAAgQAAAAEAAADvEwAAAQAAAAAAAAAAAAAAAQAAAAEBAAAvAAAAAAAAAAEFAADMAAAA/v///wEAAAAAAAAAEAAAAAQQAADEAAAAAAAAAAUQAABYAQAAAAAAABAQAACMAQAAAAAAAEAQAAB8AQAAAAAAAAIgAABYAgAAAAAAAAUgAADIAQAAAAAAABAgAADYAQAAAAAAABEgAAAMAgAAAAAAABIgAADsAQAAAAAAABMgAAD8AQAAAAAAACAgAAA4AgAAAAAAADAgAABkAgAAAAAAAAHAAACsAQAAAAAAABHAAAAgAAAAAAAAABLAAAC8AQAAAAAAABDQAAAEAAAAAAAAAA==</bookmark>
+        </asset>
+        <asset id="r4" name="20161216_002_LL_SOC113_Manja_GH4_001" uid="0000E7F926504528137EAC1410C37C97" src="file:///Users/mlv_100_mk/Movies/Untitled%201.fcpbundle/Selections_by_MK/Original%20Media/20161216_002_LL_SOC113_Manja_GH4_001.mov" start="1088263176/24000s" duration="101798697/24000s" hasVideo="1" format="r1" hasAudio="1" audioSources="1" audioChannels="2" audioRate="48000">
+            <bookmark>Ym9va2wDAAAAAAQQMAAAAPelr7JtmIxX5tX6xVVtz7GOuVknsArCWa+O40U4HaiAaAIAAAQAAAADAwAAAAgAKAUAAAABAQAAVXNlcnMAAAAKAAAAAQEAAG1sdl8xMDBfbWsAAAYAAAABAQAATW92aWVzAAAUAAAAAQEAAFVudGl0bGVkIDEuZmNwYnVuZGxlEAAAAAEBAABTZWxlY3Rpb25zX2J5X01LDgAAAAEBAABPcmlnaW5hbCBNZWRpYQAAKAAAAAEBAAAyMDE2MTIxNl8wMDJfTExfU09DMTEzX01hbmphX0dINF8wMDEubW92HAAAAAEGAAAQAAAAIAAAADQAAABEAAAAYAAAAHgAAACQAAAACAAAAAQDAAARKgYAAAAAAAgAAAAEAwAAqYkGAAAAAAAIAAAABAMAAOeJBgAAAAAACAAAAAQDAADWV/0BAAAAAAgAAAAEAwAAVFn9AQAAAAAIAAAABAMAAFhZ/QEAAAAACAAAAAQDAAChWf0BAAAAABwAAAABBgAA5AAAAPQAAAAEAQAAFAEAACQBAAA0AQAARAEAAAgAAAAABAAAQb4F8usAAAAYAAAAAQIAAAEAAAAAAAAADwAAAAAAAAAAAAAAAAAAAAgAAAAEAwAABQAAAAAAAAAEAAAAAwMAAPUBAAAIAAAAAQkAAGZpbGU6Ly8vCgAAAAEBAABNTFZfMTAwX01LAAAIAAAABAMAAAAAgjF0AAAACAAAAAAEAABBvAAOIwAAACQAAAABAQAAOTQ5MkNFRTUtNzBFOC0zQUJFLUJGNTctNzgzMUFGQUQ0MzU4GAAAAAECAACBAAAAAQAAAO8TAAABAAAAAAAAAAAAAAABAAAAAQEAAC8AAAAAAAAAAQUAAMwAAAD+////AQAAAAAAAAAQAAAABBAAAMAAAAAAAAAABRAAAFQBAAAAAAAAEBAAAIgBAAAAAAAAQBAAAHgBAAAAAAAAAiAAAFQCAAAAAAAABSAAAMQBAAAAAAAAECAAANQBAAAAAAAAESAAAAgCAAAAAAAAEiAAAOgBAAAAAAAAEyAAAPgBAAAAAAAAICAAADQCAAAAAAAAMCAAAGACAAAAAAAAAcAAAKgBAAAAAAAAEcAAACAAAAAAAAAAEsAAALgBAAAAAAAAENAAAAQAAAAAAAAA</bookmark>
+        </asset>
+        <media id="r5" name="20161216_002_LL_SOC113_Manja_MC" uid="/8sjap64QwSZntUO1W4qcw">
+            <multicam format="r6" tcStart="1081593513/24000s" tcFormat="NDF">
+                <mc-angle name="C300a" angleID="0P49Yw2lRNChGiVreSorVQ">
+                    <clip name="20161216_002_LL_SOC113_Manja_C300a_001" offset="0s" duration="102306204/24000s" start="1081593513/24000s" format="r1" tcFormat="NDF">
+                        <adjust-conform type="fill"/>
+                        <video offset="1081593513/24000s" ref="r2" duration="102306204/24000s" start="1081593513/24000s">
+                            <audio lane="-1" offset="32447805390/720000s" ref="r2" duration="3069186120/720000s" start="32447805390/720000s" role="dialogue.dialogue-1" srcCh="1, 2"/>
+                        </video>
+                        <keyword start="360531171/8000s" duration="102306204/24000s" value="20161216_002_ll_soc113_manja, c300a"/>
+                        <audio-source role="dialogue.dialogue-1" srcCh="1"/>
+                        <audio-source role="dialogue.dialogue-2" srcCh="2"/>
+                    </clip>
+                </mc-angle>
+                <mc-angle name="C300b" angleID="ja8e9/p/SmSrzmmWJrYvgw">
+                    <gap name="Gap" offset="0s" duration="1352351/24000s" start="86400314/24000s"/>
+                    <clip name="20161216_002_LL_SOC113_Manja_C300b_001" offset="1352351/24000s" duration="100924824/24000s" start="1082945864/24000s" format="r1" tcFormat="NDF">
+                        <adjust-conform type="fill"/>
+                        <video offset="1082945864/24000s" ref="r3" duration="100924824/24000s" start="1082945864/24000s">
+                            <audio lane="-1" offset="32488375920/720000s" ref="r3" duration="3027744720/720000s" start="32488375920/720000s" role="dialogue.dialogue-1" srcCh="1, 2"/>
+                        </video>
+                        <keyword start="135368233/3000s" duration="100924824/24000s" value="20161216_002_ll_soc113_manja, c300b"/>
+                        <audio-source role="dialogue.dialogue-1" srcCh="1"/>
+                        <audio-source role="dialogue.dialogue-2" srcCh="2"/>
+                    </clip>
+                </mc-angle>
+                <mc-angle name="GH4" angleID="sfMd3EERRau99wabapCoQA">
+                    <gap name="Gap" offset="0s" duration="269269/24000s" start="86400314/24000s"/>
+                    <clip name="20161216_002_LL_SOC113_Manja_GH4_001" offset="269269/24000s" duration="101798697/24000s" start="1088263176/24000s" format="r1" tcFormat="NDF">
+                        <adjust-conform type="fill"/>
+                        <video offset="1088263176/24000s" ref="r4" duration="101798697/24000s" start="1088263176/24000s">
+                            <audio lane="-1" offset="32647895280/720000s" ref="r4" duration="3053960910/720000s" start="32647895280/720000s" role="dialogue.dialogue-1" srcCh="1, 2"/>
+                        </video>
+                        <keyword start="45344299/1000s" duration="101798697/24000s" value="20161216_002_ll_soc113_manja, gh4"/>
+                    </clip>
+                </mc-angle>
+            </multicam>
+        </media>
+        <format id="r6" name="FFVideoFormat1080p2398" frameDuration="1001/24000s" width="1920" height="1080"/>
+        <media id="r7" name="MK_selection_001" uid="2EDSgXwbRzmPrkVWXgphHA">
+            <sequence duration="12029017/24000s" format="r6" tcStart="360531171/8000s" tcFormat="NDF">
+                <spine>
+                    <mc-clip name="20161216_002_LL_SOC113_Manja_MC" offset="1081593513/24000s" ref="r5" duration="12029017/24000s" start="1081593513/24000s">
+                        <mc-source angleID="0P49Yw2lRNChGiVreSorVQ" srcEnable="all"/>
+                    </mc-clip>
+                </spine>
+            </sequence>
+        </media>
+        <media id="r8" name="MK_selection_002" uid="JlIqBy9ISQOuS6882PaNtA">
+            <sequence duration="6905899/24000s" format="r6" tcStart="565598033/12000s" tcFormat="NDF">
+                <spine>
+                    <mc-clip name="20161216_002_LL_SOC113_Manja_MC" offset="1131196066/24000s" ref="r5" duration="6905899/24000s" start="1131196066/24000s">
+                        <mc-source angleID="0P49Yw2lRNChGiVreSorVQ" srcEnable="all"/>
+                    </mc-clip>
+                </spine>
+            </sequence>
+        </media>
+        <media id="r9" name="MK_selection_003" uid="test">
+            <sequence duration="6904898/24000s" format="r6" tcStart="565598033/12000s" tcFormat="NDF">
+                <spine>
+                    <mc-clip name="20161216_002_LL_SOC113_Manja_MC" offset="1131196066/24000s" ref="r5" duration="6904898/24000s" start="1131196066/24000s">
+                        <mc-source angleID="0P49Yw2lRNChGiVreSorVQ" srcEnable="all"/>
+                    </mc-clip>
+                </spine>
+            </sequence>
+        </media>
+        <format id="r10" name="FFVideoFormat1080p2997" frameDuration="1001/30000s" width="1920" height="1080"/>
+    </resources>
+    <library location="file:///Users/mlv_100_mk/Movies/Untitled%201.fcpbundle/">
+        <event name="Selections_by_MK" uid="F8C16606-F712-419F-906B-AA1CBEB44BFC">
+            <clip name="20161216_002_LL_SOC113_Manja_C300a_001" duration="102306204/24000s" start="1081593513/24000s" format="r1" tcFormat="NDF">
+                <video offset="1081593513/24000s" ref="r2" duration="102306204/24000s" start="1081593513/24000s">
+                    <audio lane="-1" offset="32447805390/720000s" ref="r2" duration="3069186120/720000s" start="32447805390/720000s" role="dialogue.dialogue-1" srcCh="1, 2"/>
+                </video>
+                <marker start="372034663/8000s" duration="1001/24000s" value="Marker 1"/>
+                <marker start="24095071/500s" duration="1001/24000s" value="Marker 2"/>
+            </clip>
+            <clip name="20161216_002_LL_SOC113_Manja_C300b_001" duration="100924824/24000s" start="1082945864/24000s" format="r1" tcFormat="NDF">
+                <video offset="1082945864/24000s" ref="r3" duration="100924824/24000s" start="1082945864/24000s">
+                    <audio lane="-1" offset="32488375920/720000s" ref="r3" duration="3027744720/720000s" start="32488375920/720000s" role="dialogue.dialogue-1" srcCh="1, 2"/>
+                </video>
+                <marker start="559025467/12000s" duration="1001/24000s" value="Marker 1"/>
+            </clip>
+            <clip name="20161216_002_LL_SOC113_Manja_GH4_001" duration="101798697/24000s" start="1088263176/24000s" format="r1" tcFormat="NDF">
+                <video offset="1088263176/24000s" ref="r4" duration="101798697/24000s" start="1088263176/24000s">
+                    <audio lane="-1" offset="32647895280/720000s" ref="r4" duration="3053960910/720000s" start="32647895280/720000s" role="dialogue.dialogue-1" srcCh="1, 2"/>
+                </video>
+                <marker start="373636263/8000s" duration="1001/24000s" value="Marker 1"/>
+                <marker start="22793771/480s" duration="1001/24000s" value="Marker 2"/>
+                <marker start="95544449/2000s" duration="1001/24000s" value="Marker 3"/>
+                <marker start="392240849/8000s" duration="1001/24000s" value="Marker 4"/>
+            </clip>
+            <mc-clip name="20161216_002_LL_SOC113_Manja_MC" ref="r5" duration="102306204/24000s" start="1081593513/24000s">
+                <mc-source angleID="0P49Yw2lRNChGiVreSorVQ" srcEnable="all"/>
+                <marker start="1114366253/24000s" duration="1001/24000s" value="export 2 minutes leading up to this" completed="0"/>
+                <marker start="562202641/12000s" duration="1001/24000s" value="just a marker" completed="0"/>
+            </mc-clip>
+            <ref-clip name="MK_selection_001" ref="r7" duration="12029017/24000s" start="360531171/8000s"/>
+            <ref-clip name="MK_selection_002" ref="r8" duration="6905899/24000s" start="565598033/12000s"/>
+            <ref-clip name="MK_selection_003" ref="r9" duration="6904898/24000s" start="565598033/12000s"/>
+            <project name="template" uid="C3EC1F7C-9533-4063-AC00-A372AB2D5526">
+                <sequence duration="40549509/30000s" format="r10" tcStart="0s" tcFormat="NDF" audioLayout="stereo" audioRate="48k">
+                    <spine>
+                        <mc-clip name="20161216_002_LL_SOC113_Manja_MC" offset="0s" ref="r5" duration="40549509/30000s" start="1351992892/30000s">
+                            <conform-rate srcFrameRate="23.98" scaleEnabled="0"/>
+                            <mc-source angleID="0P49Yw2lRNChGiVreSorVQ" srcEnable="all"/>
+                            <keyword start="278607329/6000s" duration="113113/24000s" value="for xml"/>
+                            <keyword start="371514143/8000s" duration="204204/24000s" value="for xml"/>
+                            <keyword start="371582211/8000s" duration="72072/24000s" value="for xml"/>
+                            <keyword start="74321247/1600s" duration="124124/24000s" value="for xml"/>
+                            <keyword start="1114942829/24000s" duration="87087/24000s" value="for xml"/>
+                        </mc-clip>
+                    </spine>
+                </sequence>
+            </project>
+        </event>
+    </library>
+</fcpxml>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>D3 test 002</title>
+    <link rel="stylesheet" href="_css/base.css">
+    <link rel="stylesheet" href="_css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>D3 Graphic 001</h2>
+      <svg width="600" height="500"
+           style="background: #444444">
+          <rect x="50" y="385" width="500" height="50" style="fill: rgba(255, 255, 255, .99)" />
+            <circle cx="525" cy= "90" r = "25" 
+                    style = "fill: rgba(45, 45, 60, .3)"  />
+        <text x = "50" y = "325"
+              font-family = "Garamond", "serif"
+              font-size = "250"
+             fill="rgba(220,220,220,.5)">SVG</text>
+          <g id="triangle">
+            <polyline points="50 100, 70 75, 500 90, 120 105"
+                      style="fill: rgba(230, 80, 130, .5)"/>
+          </g>
+          <use xlink:href="#triangle"
+               x="10", y="320"/>
+              </svg>
+
+
+    <script src="_lib/d3.js"></script>
+    <script src="_scripts/script.js"></script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html lang = "en">
+<head>
+    <meta charset="utf-8">
+    <title>simple form home</title>
+    <link rel="stylesheet" href="_css/basic.css">
+    
+</head>  
+    <body>
+<!--
+    <div id="position_1">
+    <p>all this is in <span class="emphasis">position 1</span></p>
+    </div>
+-->
+    <div id="forms">
+        <h1>Exposure Calculator</h1>
+        <p>just a quick test to see how to manipulate form content with other form content--maybe this isn't even the right way of thinking about it.  But we can see.  As usual, let's start with an <span class="emphasis">exposure calculator</span> but we can take it further from there. </p>
+    <form class="exposureData" id="aperture">
+        <label for="apertureEntry">Aperture:</label>
+        <input type="text" id="apertureEntry" size="6" placeholder="5.6">
+    </form>
+        <form class="exposureData" id="shutter">
+        <label for="shutterSpeed">Shutter Speed:</label>
+        <input type="text" id="shutterSpeed" size="6" placeholder="50">
+    </form>
+    <form class = "cart" id = "cart-test">
+        <div class = "item">
+        <h2>how many?</h2>
+        </div>
+        <div class = "order">
+            <label for="txt-q-test"> Quantity here:</label>
+            <input type="text" id="txt-q-test" size ="3" placeholder="0">
+        </div>
+    </form>
+    <form class = "cart" id = "cart-test-2">
+        <div class = "chooseFromGroup">
+            <h2>select one</h2>
+            
+            <label for="cam-type">Camera Type</label><br>
+            <input type="radio" value="nikon" name="cam_type" id="cam-type-nikon" checked> <label for="cam-type-nikon">Nikon</label><br>
+
+            <input type="radio" value="canon" name="cam_type" id="cam-type-canon" checked> <label for="cam-type-canon">Canon</label><br>
+
+            <input type="radio" value="Sony" name="cam_type" id="cam-type-Sony" checked> <label for="cam-type-Sony">Sony</label>
+
+        </div>
+    </form>
+
+    </div>
+</body>   
+<script type="text/javascript" src="_js/form.js"></script> 
+</html>

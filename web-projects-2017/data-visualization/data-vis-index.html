@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="en">
+<meta charset="utf-8">
+	<head>
+		<title>Basic Template</title>
+    <link rel="stylesheet" type="text/css" href="_css/reset.css">
+    <link rel="stylesheet" type="text/css" href="_css/style1.css">
+    <link rel="stylesheet" type="text/css" href="_css/dc.css">
+    <style>
+      body {
+        font-family: Avenir;
+        font-weight: 700;
+        font-size: 16px;
+      }
+    </style>
+	</head>
+	<body>
+    <p>
+      this is going to be a site for exploring dc.js and crossfilter.js in combination with d3.js
+    </p>
+    <div id="div1">
+      1
+    </div>
+    <div id="div2">
+      2
+    </div>
+    <div id="div3">
+      3
+    </div>
+    <div id="div4">
+      4
+    </div>
+    <div id="div5">
+      5
+    </div>
+    <div id="div6">
+      6
+    </div>
+    <div id="div7">
+      7
+    </div>
+    <div id="chart">
+
+    </div>
+    <script type="text/javascript" src="_js/d3.js"></script>
+    <script type="text/javascript" src="_js/crossfilter.js"></script>
+    <script type="text/javascript" src="_js/dc.js"></script>
+    <script type="text/javascript">
+      var data = [
+  {date: "2011-11-14T16:17:54Z", quantity: 2, total: 190, tip: 100, type: "tab"},
+  {date: "2011-11-14T16:20:19Z", quantity: 2, total: 190, tip: 100, type: "tab"},
+  {date: "2011-11-14T16:28:54Z", quantity: 1, total: 300, tip: 200, type: "visa"},
+  {date: "2011-11-14T16:30:43Z", quantity: 2, total: 90, tip: 0, type: "tab"},
+  {date: "2011-11-14T16:48:46Z", quantity: 2, total: 90, tip: 0, type: "tab"},
+  {date: "2011-11-14T16:53:41Z", quantity: 2, total: 90, tip: 0, type: "tab"},
+  {date: "2011-11-14T16:54:06Z", quantity: 1, total: 100, tip: 0, type: "cash"},
+  {date: "2011-11-14T16:58:03Z", quantity: 2, total: 90, tip: 0, type: "tab"},
+  {date: "2011-11-14T17:07:21Z", quantity: 2, total: 90, tip: 0, type: "tab"},
+  {date: "2011-11-14T17:22:59Z", quantity: 2, total: 90, tip: 0, type: "tab"},
+  {date: "2011-11-14T17:25:45Z", quantity: 2, total: 200, tip: 0, type: "cash"},
+  {date: "2011-11-14T17:29:52Z", quantity: 1, total: 200, tip: 100, type: "visa"}
+];
+  console.log('hello');
+  var facts = crossfilter(data);
+  console.log(data);
+  console.log(facts);
+  function print_filter(filter) {
+    var f=eval(filter);
+    if (typeof(f.length) != "undefined") {}else{}
+    if (typeof(f.top) != "undefined") {f=f.top(Infinity);}else{}
+    if (typeof(f.dimension) != "undefined") {f=f.dimension(function(d) { return "";}).top(Infinity);}else{}
+    console.log(filter+"("+f.length+") = "+JSON.stringify(f).replace("[","[\n\t").replace(/}\,/g,"},\n\t").replace("]","\n]"));
+}
+  print_filter(facts);
+    </script>
+	</body>
+</html>

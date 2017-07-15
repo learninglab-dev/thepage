@@ -1,0 +1,67 @@
+@import url(https://fonts.googleapis.com/css?family=Alegreya+Sans:100);
+html{
+        margin: 0;
+        padding: 0;
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.1+0,0.17+80,0.19+100 */
+        background: -moz-radial-gradient(center, ellipse cover, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.17) 80%, rgba(0,0,0,0.19) 100%); /* FF3.6+ */
+        background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(0,0,0,0.1)), color-stop(80%,rgba(0,0,0,0.17)), color-stop(100%,rgba(0,0,0,0.19))); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0.17) 80%,rgba(0,0,0,0.19) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0.17) 80%,rgba(0,0,0,0.19) 100%); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0.17) 80%,rgba(0,0,0,0.19) 100%); /* IE10+ */
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0.17) 80%,rgba(0,0,0,0.19) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a000000', endColorstr='#30000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    background-attachment: fixed;
+}
+body {
+    margin: 4em auto 5em;
+    width: 60%;
+    font-family: Avenir, Helvetica, Roboto, sans-serif;
+    color: #222;
+}
+h1 {
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: 4em;
+    font-weight: 100;
+    color: gray;
+}
+h2 {
+    font-size: 1.5em;
+}
+p {
+    font-size: .9em;
+    font-weight: 400;
+    margin-bottom: .9em;
+    margin-top: .9em;
+    color: #222;
+}
+ul {
+    font-size: .9em;
+}
+ol {
+   font-size: .9em;
+}
+#editor {
+    float: right;
+    height: 300px;
+    width: 40%;
+    background-color: rgba(130,130,130,.3);
+    padding-left: 5px
+}
+div.original {
+background-color: gainsboro;
+    align-content: center;
+}
+div.copy {
+    width: 30%;
+    float: right;
+background-color: hotpink;
+    background-blend-mode: darken;
+    text-align: left
+}
+#one {
+    width: 40%;
+    float: left;
+    height: 400px;
+    background-color: rgba(100,100,100,.5);
+    margin: 10px
+}

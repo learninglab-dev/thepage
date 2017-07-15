@@ -1,0 +1,209 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"di",
+				"div	Tag"
+			],
+			[
+				"l",
+				"link	Tag"
+			],
+			[
+				"rbg",
+				"rgba()"
+			],
+			[
+				"font-si",
+				"font-size"
+			],
+			[
+				"act",
+				"activity-machine"
+			],
+			[
+				"in",
+				"input	Tag"
+			],
+			[
+				"multi",
+				"multiRot"
+			],
+			[
+				"is",
+				"isoAperture"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/mlv_100_mk/Dropbox/mk_mediawork_2016/mk_mediawork_020/medium.web/web.projects/web.workshop/css_tests/pages/css-testing-ground.html",
+		"/Users/mlv_100_mk/Dropbox/mk_mediawork_2016/mk_mediawork_020/medium.web/web.projects/web.workshop/css_tests/pages/layout-practice.html",
+		"/private/var/folders/8z/vv33jpfx557cdcr6kh2j_vs80000gn/T/com.soulmen.ulysses3/015e6bd30be1492ea2a1b2fce83ae0d0/da1ddf925e27434e9e64e22b98f55276/RichText/Swiss Knife (copy).ulss",
+		"/Users/mlv_100_mk/Dropbox/mk_mediawork_2016/mk_mediawork_020/medium.web/web.projects/web.workshop/css_tests/_css/style06.css",
+		"/Users/mlv_100_mk/Dropbox/mk_mediawork_2016/mk_mediawork_020/medium.web/web.projects/web.workshop/css_tests/_css/style05.css",
+		"/Users/mlv_100_mk/Dropbox/mk_mediawork_2016/mk_mediawork_020/medium.web/web.projects/web.workshop/countdown_clock/lynda_ex/index.html",
+		"/Users/mlv_100_mk/Dropbox/mk_mediawork_2016/mk_mediawork_020/medium.web/web.projects/web.workshop/countdown_clock/non-lynda/js/jquery.countdown.js",
+		"/Users/mlv_100_mk/Dropbox/mk_mediawork_2016/tool_c4d/python_scripts/c4d_sript_20160321.py",
+		"/Users/mlv_100_mk/Dropbox/mk_sync_2016/Work in Text/PROJECT-20160323.txt",
+		"/Users/mlv_100_mk/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/mlv_100_mk/Dropbox/mk_mediawork_2016/mk_mediawork_020/medium.web/web.projects/sublime/_css/style.css"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"id = \"box"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"class = \"box"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "css_tests.sublime-project",
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

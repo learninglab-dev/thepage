@@ -1,0 +1,207 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+
+body {
+	font-family: "Oswald", "Impact";
+	width: 90%;
+	margin: 2em auto 2em;
+	background-color: rgba(255,255,255,.5);
+}
+
+h1 {
+	font-size: 3em;
+}
+
+h2 {
+	font-size: 2em;
+	font-weight: 300;
+	color: rgba(255,255,255,.9);
+}
+
+h3 {
+	font-family: "Oswald", "Futura";
+	font-weight: 100;
+	font-size: 1em;
+}
+
+header {
+	background: (rgba 255,0,0,.3) 
+}
+
+nav {
+
+}
+
+article {
+	background: rgba(255,255,255,.0);
+	width: 60%;
+	padding: 10px;
+	float: left;
+}
+
+aside {
+	width: 30%;
+	float: right;
+}
+
+section {
+	background: rgba(0,0,255,0);
+}
+
+footer {
+	margin-top: 15px; 
+}
+
+.clearfix:before {
+	content: "";
+	display: table;
+}
+
+.clearfix:after {
+	content:"";
+	display:table;
+	clear: both;
+}
+
+.box {
+	width: 150px;
+	height: 150px;
+	float: left;
+	margin: 10px 10px 0px 0px;
+	/* box-shadow: 0px 0px 50px 2px rgba(0,0,0,.4)
+*/
+}
+
+.smallbox {
+	width: 50px;
+	height: 50px;
+	float: left;
+	margin: 10px 10px 0px 0px;
+}
+
+#mainContent {
+	position: relative;
+}
+
+.num1 {
+	background: rgba(0,100,255,1); 
+
+}
+
+.num2 {	
+	background: rgba(0,100,255,.6);
+	height: 170px; 
+	position: relative;
+	top: 10px;
+	left: 50px;
+}
+
+.num3 {
+	background: rgba(0,100,255,.2);	 
+	position: absolute;
+	left: 200px;
+	top: 50px;
+}
+
+.smallbox.num3 {
+	position: fixed;
+	left: 350px;
+	background: rgba(255,0,100,.4);
+	z-index: -1;
+}
+
+.box.num4 {
+	background: rgba(255,0,55,1);
+	width: 700px;
+	position: fixed;
+	left: 200px;
+	top: 100px;
+	z-index: -1;
+}
+
+/* .num4 {
+	background: rgba(255,0,55,1);
+} */
+
+.num5 {
+	background: rgba(255,0,55,.6); 
+}
+
+.num6 {
+	background: rgba(255,0,55,.2); 
+}
+
+.num7 {
+	background: rgba(0,100,255,.4); 
+}
+
+.num8 {
+	background: rgba(0,100,255,.3); 
+}
+
+.num9 {
+	background: rgba(0,100,100,.8);	 
+}
+
+.num10 {
+	background: rgba(0,100,100,.3);
+}
+
+.num11 {
+	background: rgba(0,100,100,.1); 
+}
+
+.num12 {
+	background: rgba(0,100,100,.9); 
+	height: 150px;
+}
+
+.num13 {
+	background: rgba(0,200,100,.3); 
+}
+
+.num14 {
+	background: rgba(255,100,0,.8); 
+}
+
+.num15 {
+	background: rgba(120,21,0,.5); 
+}
+
+.num16 {
+	background: rgba(255,235,0,.8); 
+}

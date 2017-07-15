@@ -1,0 +1,203 @@
+body {
+    width: 540px;
+    margin: auto;
+    font-family: "Avenir";
+    font-weight: 200;
+    font-size: 10pt;
+    line-height: 1.2em;
+    margin-bottom: 5px;
+    padding-left: 50px;
+    padding-right: 50px;
+    color: rgba(20, 20, 20, 0.7);
+}
+
+h1 {
+  font-size: 50px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  line-height: 60px;
+  text-align: center;
+}
+
+
+h2 {
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 30px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+
+a {
+  color: rgba(0, 0, 100, 0.7);
+
+}
+
+#completeForm {
+  width: 420px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+div.indent {
+  margin-left: 40px;
+
+}
+
+
+div.clipId {
+  float: left;
+  font-size: 12pt;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 2px;
+  padding-left: 5px;
+  padding-right: 5px;
+  line-height: 45px;
+  border: 0;
+  width: 80px;
+  height: 45px;
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(0,60,100,.7);
+}
+
+p {
+  margin-left: 100px;
+  margin-right: 100px;
+  line-height: 1.4em;
+
+}
+
+form {
+  width: 400px;
+  margin: auto;
+  font-family: "Avenir";
+  font-weight: 200;
+  font-size: 10pt;
+  line-height: 1.2em;
+  margin-bottom: 5px;
+  color: rgba(20, 20, 20, 0.7);
+
+}
+
+input {
+  font-family: "Avenir";
+  font-weight: 200;
+  font-size: 10pt;
+  line-height: 1.2em;
+  margin-bottom: 5px;
+  color: rgba(50, 50, 50, 0.8);
+  border-radius: 2px;
+  border: 0.5px dotted;
+  padding: 3px;
+  margin-right: 3px;
+  text-align: center;
+
+}
+
+input.longString {
+  text-align: left;
+}
+
+input[type=number]{
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  appearance: none;
+  }
+
+span.form-001 {
+  font-size: 14pt;
+  font-weight: 500
+
+}
+
+input[type=submit] {
+    border-radius: 2px;
+    border: 0;
+    width: 80px;
+    font-size: 12pt;
+    height: 45px;
+    margin-left: 160px;
+    color: rgba(255, 255, 255, .8);
+    background: rgba(200,0,40,.4);
+    transition-duration: .5s;
+    transition-property: background-color;
+    transition-timing-function: ease-out;
+
+}
+
+.submitButton {
+  margin: auto;
+}
+
+.submitButton:hover {
+  background-color: rgba(200,0,40,.8);
+  color: rgba(255, 255, 255, 1);
+  transition-duration: .5s;
+  transition-property: background-color;
+  transition-timing-function: ease-out;
+}
+
+div.results {
+  background-color: rgba(130, 0, 40, 0.08);
+  border-radius: 4px;
+  padding: 10px;
+  width: 380px;
+  margin: auto;
+}
+
+div.rightSidebar {
+  background-color: rgba(0, 60, 200, 0.5);
+  border-radius: 3px;
+  width: 350px;
+  height: 1000px;
+float: right;
+
+}
+
+select {
+  font-family: "Avenir";
+  font-weight: 100;
+  font-size: 9pt;
+  width: 300px;
+
+}
+
+.center {
+  margin-left:50px;
+}
+
+h4 {
+  text-align: center;
+
+}
+
+
+div.decorative1 {
+  float: left;
+  width: 50px;
+  height: 200px;
+  background-color: rgba(250, 0, 30, 0.4);
+  text-align: center;
+  margin: 20px;
+}
+
+
+div.decorative2 {
+  float: left;
+  width: 50px;
+  height: 200px;
+  background-color: rgba(0, 70, 240, 0.4);
+  text-align: center;
+  margin: 20px;
+}
+
+/*
+pre {
+  font-family: Courier;
+
+}
+*/

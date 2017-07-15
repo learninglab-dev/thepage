@@ -1,0 +1,53 @@
+body {
+    font-family: "Avenir Next", sans-serif;
+    font-weight: 300;
+    position: relative
+}
+
+strong {
+    font-weight: 800;
+    color: red
+}
+h1 {
+    font-size: 3em;
+    font-weight: 100
+}
+
+h2 {
+    font-size: 2em;
+    font-weight: 100;
+    text-align: center;
+    color: #222222;
+    transition-property: color;
+    transition-duration: 2s;
+}
+
+h2:hover {color: #dd2222;}
+
+h3 {
+    font-size: 1.5em;
+    font-weight: 500;
+    text-align: left
+}
+
+.highlight  {
+    color: rgb(140, 140, 0);
+    font-weight: 800
+}
+
+#headerGraphic {
+    width: 600px;
+    margin: auto;
+    margin-top: 100px;
+    
+}
+
+
+#postHeader {
+    width: 600px;
+        margin: auto;
+            margin-top: 10px
+    
+}
+
+
